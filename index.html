@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========================= -->
+  <!-- BASIC META TAGS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ========================= -->
+  <!-- TITLE -->
+  <!-- ========================= -->
+  <title>World Weather Update</title>
+
+  <!-- ========================= -->
+  <!-- GOOGLE FONTS -->
+  <!-- ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ========================= -->
+  <!-- TAILWIND CSS -->
+  <!-- ========================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ========================= -->
+  <!-- FONT AWESOME -->
+  <!-- ========================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- ========================= -->
+  <!-- CUSTOM CSS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- MAIN APP -->
+  <!-- ========================= -->
+  <main class="app-container">
+
+    <!-- ========================= -->
+    <!-- TOP HEADER -->
+    <!-- ========================= -->
+    <header class="top-header">
+
+      <!-- LOGO -->
+      <div class="logo-section">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
+          alt="Weather Logo"
+          class="logo-icon"
+        />
+
+        <h1 class="logo-text">Horizon</h1>
+      </div>
+
+      <!-- SEARCH BAR -->
+      <div class="search-container">
+
+        <div class="search-box">
+
+          <!-- SEARCH ICON -->
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+          <!-- INPUT -->
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a city..."
+          />
+
+          <!-- CURRENT LOCATION BUTTON -->
+          <button id="locationBtn">
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </button>
+
+        </div>
+
+        <!-- RECENT SEARCHES -->
+        <div class="recent-searches hidden" id="recentSearches">
+
+          <div class="recent-header">
+            <h3>Recent Searches</h3>
+
+            <button id="clearRecentBtn">
+              Clear All
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+
+          <!-- RECENT SEARCH LIST -->
+          <ul id="recentSearchList">
+
+            <!-- JS WILL INSERT ITEMS -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- TEMPERATURE TOGGLE -->
+      <div class="temp-toggle">
+
+        <button class="active-temp" id="celsiusBtn">
+          °C
+        </button>
+
+        <button id="fahrenheitBtn">
+          °F
+        </button>
+
+      </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- WEATHER CONTENT -->
+    <!-- ========================= -->
+    <section class="weather-content">
+
+      <!-- ========================= -->
+      <!-- LEFT WEATHER INFO -->
+      <!-- ========================= -->
+      <div class="weather-info">
+
+        <!-- MAIN TEMPERATURE -->
+        <h2 class="temperature" id="temperature">
+          34°
+        </h2>
+
+        <!-- LOCATION -->
+        <div class="location-row">
+
+          <h3 id="cityName">
+            Bhubaneswar, IN
+          </h3>
+
+          <i class="fa-solid fa-location-dot location-dot"></i>
+
+        </div>
+
+        <!-- WEATHER CONDITION -->
+        <p class="weather-condition" id="weatherCondition">
+          Haze
+        </p>
+
+        <!-- DATE & TIME -->
+        <p class="date-time" id="dateTime">
+          Friday, May 24 • 10:30 AM
+        </p>
+
+      </div>
+
+      <!-- ========================= -->
+      <!-- WEATHER DETAILS CARD -->
+      <!-- ========================= -->
+      <div class="weather-details-card">
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-item">
+
+          <div class="detail-top">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Humidity</span>
+          </div>
+
+          <h4 id="humidity">
+            70%
+          </h4>
+
+        </div>
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-item">
+
+          <div class="detail-top">
+            <i class="fa-solid fa-wind"></i>
+            <span>Wind</span>
+          </div>
+
+          <h4 id="windSpeed">
+            6 km/h
+          </h4>
+
+        </div>
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-item">
+
+          <div class="detail-top">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span>Pressure</span>
+          </div>
+
+          <h4 id="pressure">
+            999 mb
+          </h4>
+
+        </div>
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-item">
+
+          <div class="detail-top">
+            <i class="fa-regular fa-sun"></i>
+            <span>UV Index</span>
+          </div>
+
+          <h4 id="uvIndex">
+            4 Moderate
+          </h4>
+
+        </div>
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-item">
+
+          <div class="detail-top">
+            <i class="fa-solid fa-temperature-half"></i>
+            <span>Feels Like</span>
+          </div>
+
+          <h4 id="feelsLike">
+            41°
+          </h4>
+
+        </div>
+
+        <!-- DETAIL ITEM -->
+        <div class="detail-top visibility-item">
+
+          <div class="detail-top">
+            <i class="fa-regular fa-eye"></i>
+            <span>Visibility</span>
+          </div>
+
+          <h4 id="visibility">
+            6 km
+          </h4>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FORECAST SECTION -->
+    <!-- ========================= -->
+    <section class="forecast-section">
+
+      <!-- FORECAST HEADER -->
+      <div class="forecast-header">
+
+        <h2>5-Day Forecast</h2>
+
+        <button class="view-more-btn">
+          View More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </div>
+
+      <!-- FORECAST CARDS -->
+      <div class="forecast-cards">
+
+        <!-- CARD -->
+        <div class="forecast-card">
+
+          <h3>Today</h3>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+            alt="Sunny"
+          />
+
+          <div class="forecast-temp">
+            <span class="max-temp">34°</span>
+            <span class="min-temp">24°</span>
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="forecast-card">
+
+          <h3>Tomorrow</h3>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3351/3351979.png"
+            alt="Rainy"
+          />
+
+          <div class="forecast-temp">
+            <span class="max-temp">32°</span>
+            <span class="min-temp">23°</span>
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="forecast-card">
+
+          <h3>Sun</h3>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+            alt="Cloudy"
+          />
+
+          <div class="forecast-temp">
+            <span class="max-temp">33°</span>
+            <span class="min-temp">24°</span>
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="forecast-card">
+
+          <h3>Mon</h3>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/414/414927.png"
+            alt="Cloudy"
+          />
+
+          <div class="forecast-temp">
+            <span class="max-temp">31°</span>
+            <span class="min-temp">23°</span>
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="forecast-card">
+
+          <h3>Tue</h3>
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+            alt="Sunny"
+          />
+
+          <div class="forecast-temp">
+            <span class="max-temp">35°</span>
+            <span class="min-temp">24°</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CUSTOM ERROR MESSAGE -->
+    <!-- ========================= -->
+    <div class="error-popup hidden" id="errorPopup">
+
+      <i class="fa-solid fa-circle-exclamation"></i>
+
+      <p id="errorMessage">
+        City not found
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- ========================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
