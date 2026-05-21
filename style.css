@@ -600,7 +600,7 @@
   .forecast-card:hover img {
     transform: scale(1.08);
   }
-  
+
   /* ========================================= */
   /* FORECAST TEMP */
   /* ========================================= */
@@ -779,15 +779,16 @@
   
     .forecast-cards {
       display: flex;
-  
       overflow-x: auto;
-  
       padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
     }
   
     .forecast-card {
-      min-width: 220px;
-    }
+        min-width: 220px;
+      
+        scroll-snap-align: start;
+      }
   
   }
   
