@@ -9,6 +9,7 @@ The project focuses on creating a clean, responsive, and visually appealing user
 
 # Features
 
+- Real-time weather updates
 - Search weather forecasts by city name
 - Get weather details for the current location
 - Real-time weather data using OpenWeatherMap API
