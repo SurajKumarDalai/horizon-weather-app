@@ -65,9 +65,9 @@ Horizon-Weather-App/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/horizon-weather-app.git
+git clone https://github.com/SurajKumarDalai/horizon-weather-app.git
 ```
-
+    
 2. Open the project folder
 
 ```bash
@@ -144,6 +144,8 @@ The application is responsive across:
 ---
 
 # Learning Outcomes
+
+This project helped me improve my understanding of API integration, asynchronous JavaScript, responsive UI design, and dynamic DOM manipulation while building a real-world frontend application.
 
 Through this project, I practiced:
 - API integration using Fetch API
