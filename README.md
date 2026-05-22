@@ -82,15 +82,21 @@ Simply open the `index.html` file in your browser.
 
 # Screenshots
 
-## Main Dashboard
+## Desktop View
 
-(Add your project screenshot here)
+![Horizon Dashboard](images/dashboard.png)
 
-Example:
+---
 
-```md
-![Dashboard Screenshot](images/dashboard.png)
-```
+## Tablet View
+
+![Horizon Tablet View](images/tablet-view.png)
+
+---
+
+## Mobile View
+
+![Horizon Mobile View](images/mobile-view.png)
 
 ---
 
