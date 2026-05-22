@@ -84,19 +84,19 @@ Simply open the `index.html` file in your browser.
 
 ## Desktop View
 
-![Horizon Dashboard](images/dashboard.png)
+![Horizon Dashboard](/images/dashboard.png)
 
 ---
 
 ## Tablet View
 
-![Horizon Tablet View](images/tablet-view.png)
+![Horizon Tablet View](/images/tablet-view.png)
 
 ---
 
 ## Mobile View
 
-![Horizon Mobile View](images/mobile-view.png)
+![Horizon Mobile View](/images/mobile-view.png)
 
 ---
 
