@@ -568,7 +568,7 @@
     align-items: center;
     justify-content: space-between;
   
-    transition: 0.3s ease;
+    transition: 0.25s ease;
   }
   
   .forecast-card:hover {
